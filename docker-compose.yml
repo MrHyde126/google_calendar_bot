@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  bot:
+    image: ${DOCKER_USERNAME}/google_calendar_bot
+    restart: always
+    env_file:
+      - ./.env
