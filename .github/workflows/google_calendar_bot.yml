@@ -62,6 +62,6 @@ jobs:
           sudo chmod 666 .env
           sudo truncate -s 0 .env
           echo TG_BOT_TOKEN=${{ secrets.TG_BOT_TOKEN }} >> .env
-          echo POSTGRES_USER=${{ secrets.TG_CHAT_ID }} >> .env
-          echo POSTGRES_DB=${{ secrets.DOCKER_USERNAME }} >> .env
+          echo TG_CHAT_ID=${{ secrets.TG_CHAT_ID }} >> .env
+          echo DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }} >> .env
           sudo docker compose up -d
