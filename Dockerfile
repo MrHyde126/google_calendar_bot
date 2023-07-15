@@ -3,4 +3,4 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt --no-cache-dir
 COPY . .
-CMD ["tg_bot.py"]
+RUN tg_bot.py
