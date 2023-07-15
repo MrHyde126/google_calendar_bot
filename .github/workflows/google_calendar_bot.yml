@@ -56,12 +56,12 @@ jobs:
         script: |
           sudo docker image prune -f
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/google_calendar_bot
-          sudo docker compose stop
-          sudo docker compose rm bot
+          sudo docker-compose stop
+          sudo docker-compose rm bot
           sudo touch .env
           sudo chmod 666 .env
           sudo truncate -s 0 .env
           echo TG_BOT_TOKEN=${{ secrets.TG_BOT_TOKEN }} >> .env
           echo TG_CHAT_ID=${{ secrets.TG_CHAT_ID }} >> .env
           echo DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }} >> .env
-          sudo docker compose up -d
+          sudo docker-compose up -d
