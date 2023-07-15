@@ -73,7 +73,7 @@ class GoogleCalendar:
         )
         events = events_result.get('items', [])
         if not events:
-            return
+            return None
         event_list = 'Сегодня:\n'
         for event in events:
             event_list += f'{event["description"]}\n'
