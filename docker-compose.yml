@@ -5,9 +5,6 @@ services:
     image: ${DOCKER_USERNAME}/google_calendar_bot
     restart: always
     volumes:
-      - creds:/app/creds/
+      - ./creds:/app/creds/
     env_file:
       - ./.env
-
-volumes:
-  creds:
