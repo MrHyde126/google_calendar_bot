@@ -22,6 +22,6 @@ google-auth-oauthlib 1.0.0
 - Запишите токен вашего бота в файл .env в переменную TG_BOT_TOKEN
 - Узнайте свой id у [userinfobot](https://t.me/userinfobot) отправив команду ```/start```
 - Запишите этот id в файл .env в переменную TG_CHAT_ID
-- Настройте API Google календаря согласно [инструкции](https://developers.google.com/calendar/api/quickstart/python?hl=en). В качестве метода авторизации используйте OAuth 2.0. Файл должен называться credentials.json.
+- Настройте API Google календаря согласно [инструкции](https://developers.google.com/calendar/api/quickstart/python?hl=en). В качестве метода авторизации используйте OAuth 2.0. Файл должен называться credentials.json и располагаться в папке creds.
 - Измените значение переменной BIRTHDAYS_ID в файле google_calendar.py на id вашего календаря (его можно найти в настройках Google календаря)
 - Запустите файл tg_bot.py
